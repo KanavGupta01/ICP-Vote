@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "BharatVote_backend": {
+      "main": "src/BharatVote_backend/main.mo",
+      "type": "motoko"
+    },
+    "BharatVote_frontend": {
+      "dependencies": [
+        "BharatVote_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/BharatVote_frontend/src/index.html"
+      },
+      "source": [
+        "src/BharatVote_frontend/assets",
+        "dist/BharatVote_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
